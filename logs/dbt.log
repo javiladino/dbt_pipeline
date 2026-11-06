@@ -1,0 +1,532 @@
+[0m15:50:57.912527 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107dbd8b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109292700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109292a00>]}
+
+
+============================== 15:50:57.915283 | 81245688-6c7f-4b43-b00c-2ca611f799c0 ==============================
+[0m15:50:57.915283 [info ] [MainThread]: Running with dbt=1.10.23
+[0m15:50:57.915613 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'quiet': 'False', 'version_check': 'True', 'warn_error': 'None', 'debug': 'False', 'log_cache_events': 'False', 'invocation_command': 'dbt debug', 'write_json': 'True', 'no_print': 'None', 'log_path': '/Users/javierladino/Documents/Estudio/data_engineer/dbt/dbt_pipeline/dbt_pipeline/logs', 'log_format': 'default', 'printer_width': '80', 'target_path': 'None', 'use_colors': 'True', 'profiles_dir': '/Users/javierladino/.dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'empty': 'None', 'indirect_selection': 'eager', 'introspect': 'True'}
+[0m15:50:57.915837 [info ] [MainThread]: This version of dbt is deprecated and no longer receives regular patches, including for known bugs. We recommend upgrading to a newer supported version of dbt: https://docs.getdbt.com/docs/dbt-versions
+[0m15:50:57.916039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecated_version_invocation', 'label': '81245688-6c7f-4b43-b00c-2ca611f799c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107dbd8b0>]}
+[0m15:50:57.925463 [info ] [MainThread]: dbt version: 1.10.23
+[0m15:50:57.925692 [info ] [MainThread]: python version: 3.9.6
+[0m15:50:57.925866 [info ] [MainThread]: python path: /Users/javierladino/.local/share/uv/tools/dbt-core/bin/python
+[0m15:50:57.926029 [info ] [MainThread]: os info: macOS-27.0.1-arm64-arm-64bit
+[0m15:50:57.928892 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.databricks'
+[0m15:50:57.929172 [info ] [MainThread]: Using profiles dir at /Users/javierladino/.dbt
+[0m15:50:57.929341 [info ] [MainThread]: Using profiles.yml file at /Users/javierladino/.dbt/profiles.yml
+[0m15:50:57.929502 [info ] [MainThread]: Using dbt_project.yml file at /Users/javierladino/Documents/Estudio/data_engineer/dbt/dbt_pipeline/dbt_pipeline/dbt_project.yml
+[0m15:50:57.987365 [info ] [MainThread]: Configuration:
+[0m15:50:57.987609 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m15:50:57.987786 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m15:50:57.987952 [info ] [MainThread]: Required dependencies:
+[0m15:50:57.988171 [debug] [MainThread]: Executing "git --help"
+[0m15:50:58.007713 [debug] [MainThread]: STDOUT: "b"uso: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nEstos son comandos comunes de Git usados en varias situaciones:\n\ncomenzar un \xc3\xa1rea de trabajo (mira tambi\xc3\xa9n: git help tutorial)\n   clone      Clonar un repositorio dentro de un nuevo directorio\n   init       Crear un repositorio de Git vac\xc3\xado o reinicia el que ya existe\n\ntrabajar en los cambios actuales (mira tambi\xc3\xa9n: git help everyday)\n   add        Agregar contenido de archivos al \xc3\xadndice\n   mv         Mover o cambiar el nombre a archivos, directorios o enlaces simb\xc3\xb3licos\n   restore    Restaurar archivos del \xc3\xa1rbol de trabajo\n   rm         Borrar archivos del \xc3\xa1rbol de trabajo y del \xc3\xadndice\n\nexaminar el historial y el estado (mira tambi\xc3\xa9n: git help revisions)\n   bisect     Usar la b\xc3\xbasqueda binaria para encontrar el commit que introdujo el bug\n   diff       Mostrar los cambios entre commits, commit y \xc3\xa1rbol de trabajo, etc\n   grep       Imprimir las l\xc3\xadneas que concuerden con el patr\xc3\xb3n\n   log        Mostrar los logs de los commits\n   show       Mostrar varios tipos de objetos\n   status     Mostrar el estado del \xc3\xa1rbol de trabajo\n\ncrecer, marcar y ajustar tu historial com\xc3\xban\n   backfill   Download missing objects in a partial clone\n   branch     Listar, crear, o borrar ramas\n   commit     Grabar los cambios al repositorio\n   history    EXPERIMENTAL: Rewrite history\n   merge      Juntar dos o m\xc3\xa1s historiales de desarrollo juntos\n   rebase     Volver a aplicar commits en la punta de otra rama\n   reset      Set `HEAD` or the index to a known state\n   switch     Cambiar de branch\n   tag        Create, list, delete or verify tags\n\ncolaborar (mira tambi\xc3\xa9n: git help workflows)\n   fetch      Descargar objetos y referencias de otro repositorio\n   pull       Realizar un fetch e integra con otro repositorio o rama local\n   push       Actualizar referencias remotas junto con sus objetos asociados\n\n'git help -a' y 'git help -g' listan los subcomandos disponibles y algunas\ngu\xc3\xadas de concepto. Consulta 'git help <command>' o 'git help <concepto>'\npara leer sobre un subcomando o concepto espec\xc3\xadfico.\nMira 'git help git' para una vista general del sistema.\n""
+[0m15:50:58.008299 [debug] [MainThread]: STDERR: "b''"
+[0m15:50:58.008509 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:50:58.008705 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m15:50:58.008871 [info ] [MainThread]: [31m1 check failed:[0m
+[0m15:50:58.009031 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "dbt_pipeline", target "dev" invalid: Runtime Error
+    Could not find adapter type databricks!
+
+
+[0m15:50:58.010654 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.14011696, "process_in_blocks": "0", "process_kernel_time": 0.123215, "process_mem_max_rss": "101531648", "process_out_blocks": "0", "process_user_time": 0.798951}
+[0m15:50:58.010907 [debug] [MainThread]: Command `dbt debug` failed at 15:50:58.010855 after 0.14 seconds
+[0m15:50:58.011155 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107dbd8b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109292820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1083f7400>]}
+[0m15:50:58.011396 [debug] [MainThread]: Flushing usage events
+[0m15:50:58.436468 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:53:40.801091 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b75aea0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b7677d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b767530>]}
+
+
+============================== 17:53:40.819091 | c7355b0c-71e5-40f5-98ee-e86bbe8eaaf6 ==============================
+[0m17:53:40.819091 [info ] [MainThread]: Running with dbt=1.12.6
+[0m17:53:40.819409 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt debug', 'quiet': 'False', 'use_experimental_parser': 'False', 'introspect': 'True', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'empty': 'None', 'maximum_seed_size_mib': '1', 'version_check': 'True', 'cache_selected_only': 'False', 'printer_width': '80', 'indirect_selection': 'eager', 'log_format': 'default', 'debug': 'False', 'no_print': 'None', 'log_path': '/Users/javierladino/Documents/Estudio/data_engineer/dbt/dbt_pipeline/dbt_pipeline/logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'partial_parse': 'True', 'write_json': 'True', 'target_path': 'None', 'profiles_dir': '/Users/javierladino/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'static_parser': 'True', 'hints_enabled': 'True'}
+[0m17:53:40.852037 [info ] [MainThread]: dbt version: 1.12.6
+[0m17:53:40.852225 [info ] [MainThread]: python version: 3.12.15
+[0m17:53:40.852349 [info ] [MainThread]: python path: /Users/javierladino/Documents/Estudio/data_engineer/dbt/dbt_pipeline/dbt_pipeline/.venv/bin/python
+[0m17:53:40.852461 [info ] [MainThread]: os info: macOS-27.0.1-arm64-arm-64bit
+[0m17:53:42.190034 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m17:53:42.190273 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m17:53:42.190409 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m17:53:50.344791 [info ] [MainThread]: Using profiles dir at /Users/javierladino/.dbt
+[0m17:53:50.345031 [info ] [MainThread]: Using profiles.yml file at /Users/javierladino/.dbt/profiles.yml
+[0m17:53:50.345165 [info ] [MainThread]: Using dbt_project.yml file at /Users/javierladino/Documents/Estudio/data_engineer/dbt/dbt_pipeline/dbt_pipeline/dbt_project.yml
+[0m17:53:50.345296 [info ] [MainThread]: adapter type: databricks
+[0m17:53:50.345409 [info ] [MainThread]: adapter version: 1.13.0
+[0m17:53:50.388855 [info ] [MainThread]: Configuration:
+[0m17:53:50.389085 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:53:50.389228 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:53:50.389347 [info ] [MainThread]: Required dependencies:
+[0m17:53:50.389557 [debug] [MainThread]: Executing "git --help"
+[0m17:53:50.423341 [debug] [MainThread]: STDOUT: "b"uso: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nEstos son comandos comunes de Git usados en varias situaciones:\n\ncomenzar un \xc3\xa1rea de trabajo (mira tambi\xc3\xa9n: git help tutorial)\n   clone      Clonar un repositorio dentro de un nuevo directorio\n   init       Crear un repositorio de Git vac\xc3\xado o reinicia el que ya existe\n\ntrabajar en los cambios actuales (mira tambi\xc3\xa9n: git help everyday)\n   add        Agregar contenido de archivos al \xc3\xadndice\n   mv         Mover o cambiar el nombre a archivos, directorios o enlaces simb\xc3\xb3licos\n   restore    Restaurar archivos del \xc3\xa1rbol de trabajo\n   rm         Borrar archivos del \xc3\xa1rbol de trabajo y del \xc3\xadndice\n\nexaminar el historial y el estado (mira tambi\xc3\xa9n: git help revisions)\n   bisect     Usar la b\xc3\xbasqueda binaria para encontrar el commit que introdujo el bug\n   diff       Mostrar los cambios entre commits, commit y \xc3\xa1rbol de trabajo, etc\n   grep       Imprimir las l\xc3\xadneas que concuerden con el patr\xc3\xb3n\n   log        Mostrar los logs de los commits\n   show       Mostrar varios tipos de objetos\n   status     Mostrar el estado del \xc3\xa1rbol de trabajo\n\ncrecer, marcar y ajustar tu historial com\xc3\xban\n   backfill   Download missing objects in a partial clone\n   branch     Listar, crear, o borrar ramas\n   commit     Grabar los cambios al repositorio\n   history    EXPERIMENTAL: Rewrite history\n   merge      Juntar dos o m\xc3\xa1s historiales de desarrollo juntos\n   rebase     Volver a aplicar commits en la punta de otra rama\n   reset      Set `HEAD` or the index to a known state\n   switch     Cambiar de branch\n   tag        Create, list, delete or verify tags\n\ncolaborar (mira tambi\xc3\xa9n: git help workflows)\n   fetch      Descargar objetos y referencias de otro repositorio\n   pull       Realizar un fetch e integra con otro repositorio o rama local\n   push       Actualizar referencias remotas junto con sus objetos asociados\n\n'git help -a' y 'git help -g' listan los subcomandos disponibles y algunas\ngu\xc3\xadas de concepto. Consulta 'git help <command>' o 'git help <concepto>'\npara leer sobre un subcomando o concepto espec\xc3\xadfico.\nMira 'git help git' para una vista general del sistema.\n""
+[0m17:53:50.423895 [debug] [MainThread]: STDERR: "b''"
+[0m17:53:50.424050 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:53:50.424195 [info ] [MainThread]: Connection:
+[0m17:53:50.424379 [info ] [MainThread]:   host: dbc-815b106d-b4db.cloud.databricks.com
+[0m17:53:50.424494 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/a04c733d60578c8d
+[0m17:53:50.424590 [info ] [MainThread]:   catalog: default
+[0m17:53:50.424685 [info ] [MainThread]:   schema: default
+[0m17:53:50.424975 [info ] [MainThread]: Registered adapter: databricks=1.13.0
+[0m17:53:50.518137 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=debug) - Creating connection
+[0m17:53:50.518448 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m17:53:51.083423 [info ] [MainThread]: Databricks adapter:   SPOG host (host_type='workspace'): no
+[0m17:53:51.084286 [info ] [MainThread]: Databricks adapter:   workspace_id (from ?o= in http_path): None
+[0m17:53:51.084712 [info ] [MainThread]: Databricks adapter:   databricks-sql-connector version: 4.4.0 (supported)
+[0m17:53:51.085078 [info ] [MainThread]: Databricks adapter:   databricks-sdk version: 0.117.0 (supported)
+[0m17:53:51.085595 [debug] [MainThread]: Using databricks connection "debug"
+[0m17:53:51.085952 [debug] [MainThread]: On debug: select 1 as id
+[0m17:53:51.086244 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:53:53.341819 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f1da02-a53b-126f-b561-8ebe71b03f83) - Created
+[0m17:53:59.674663 [debug] [MainThread]: SQL status: OK in 8.590 seconds
+[0m17:53:59.677214 [debug] [MainThread]: Databricks adapter: Cursor(session-id=01f1da02-a53b-126f-b561-8ebe71b03f83, command-id=01f1da02-a5f5-188d-a34a-b81918b40aad) - Closing
+[0m17:53:59.979449 [debug] [MainThread]: On debug: Close
+[0m17:53:59.980814 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f1da02-a53b-126f-b561-8ebe71b03f83) - Closing
+[0m17:54:00.218419 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m17:54:00.219137 [info ] [MainThread]: [32mAll checks passed![0m
+[0m17:54:00.220067 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 19.473303, "process_in_blocks": "0", "process_kernel_time": 0.974621, "process_mem_max_rss": "342769664", "process_out_blocks": "0", "process_user_time": 4.304858}
+[0m17:54:00.220975 [debug] [MainThread]: Command `dbt debug` succeeded at 17:54:00.220812 after 19.47 seconds
+[0m17:54:00.221522 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1137c1fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1139f79e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113cd7620>]}
+[0m17:54:00.222037 [debug] [MainThread]: Flushing usage events
+[0m17:54:00.793340 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:59:21.208507 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109a207a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a4bf050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a4bed80>]}
+
+
+============================== 17:59:21.212112 | f59c7030-dc66-457e-85ec-181af05bc0f5 ==============================
+[0m17:59:21.212112 [info ] [MainThread]: Running with dbt=1.12.6
+[0m17:59:21.212442 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'hints_enabled': 'True', 'warn_error': 'None', 'partial_parse': 'True', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'maximum_seed_size_mib': '1', 'no_print': 'None', 'log_format': 'default', 'quiet': 'False', 'invocation_command': 'dbt run', 'debug': 'False', 'static_parser': 'True', 'log_path': '/Users/javierladino/Documents/Estudio/data_engineer/dbt/dbt_pipeline/dbt_pipeline/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'introspect': 'True', 'empty': 'False', 'profiles_dir': '/Users/javierladino/.dbt', 'write_json': 'True', 'cache_selected_only': 'False'}
+[0m17:59:21.705879 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m17:59:21.706120 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m17:59:21.706256 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m17:59:22.344544 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f59c7030-dc66-457e-85ec-181af05bc0f5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107956a50>]}
+[0m17:59:22.415476 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f59c7030-dc66-457e-85ec-181af05bc0f5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e66000>]}
+[0m17:59:22.415957 [info ] [MainThread]: Registered adapter: databricks=1.13.0
+[0m17:59:22.520253 [debug] [MainThread]: checksum: 205618094adeef314bf9310d5c6f07b83649174a97246d3878885001afd639a2, vars: {}, profile: dbt_pipeline, target: dev, version: 1.12.6
+[0m17:59:22.520710 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m17:59:22.520901 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'f59c7030-dc66-457e-85ec-181af05bc0f5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112859b80>]}
+[0m17:59:23.363445 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f59c7030-dc66-457e-85ec-181af05bc0f5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112ff8a70>]}
+[0m17:59:23.417833 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/javierladino/Documents/Estudio/data_engineer/dbt/dbt_pipeline/dbt_pipeline/target/manifest.json
+[0m17:59:23.419542 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/javierladino/Documents/Estudio/data_engineer/dbt/dbt_pipeline/dbt_pipeline/target/semantic_manifest.json
+[0m17:59:23.448533 [debug] [MainThread]: Wrote artifact OsiDocument to /Users/javierladino/Documents/Estudio/data_engineer/dbt/dbt_pipeline/dbt_pipeline/target/osi_document.json
+[0m17:59:23.464162 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f59c7030-dc66-457e-85ec-181af05bc0f5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11318f9b0>]}
+[0m17:59:23.464392 [info ] [MainThread]: Found 2 models, 4 data tests, 782 macros
+[0m17:59:23.464549 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f59c7030-dc66-457e-85ec-181af05bc0f5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1131b9730>]}
+[0m17:59:23.465369 [info ] [MainThread]: 
+[0m17:59:23.465526 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:59:23.465646 [info ] [MainThread]: 
+[0m17:59:23.465939 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m17:59:23.466064 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m17:59:23.469070 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_default) - Creating connection
+[0m17:59:23.469237 [debug] [ThreadPool]: Acquiring new databricks connection 'list_default'
+[0m17:59:23.475015 [debug] [ThreadPool]: Using databricks connection "list_default"
+[0m17:59:23.475220 [debug] [ThreadPool]: On list_default: /* {"app": "dbt", "dbt_version": "1.12.6", "dbt_databricks_version": "1.13.0", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_pipeline", "target_name": "dev", "invocation_id": "f59c7030-dc66-457e-85ec-181af05bc0f5", "connection_name": "list_default"} */
+
+    
+
+  SHOW SCHEMAS IN `default`
+
+
+  
+[0m17:59:23.475362 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:59:25.819320 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f1da03-6bb0-1327-84bf-da4093610562) - Created
+[0m17:59:26.749287 [debug] [ThreadPool]: Databricks adapter: Exception while trying to execute query
+/* {"app": "dbt", "dbt_version": "1.12.6", "dbt_databricks_version": "1.13.0", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_pipeline", "target_name": "dev", "invocation_id": "f59c7030-dc66-457e-85ec-181af05bc0f5", "connection_name": "list_default"} */
+
+    
+
+  SHOW SCHEMAS IN `default`
+
+
+  
+: [NO_SUCH_CATALOG_EXCEPTION] Catalog 'default' was not found. Please verify the catalog name and then retry the query or command again. SQLSTATE: 42704
+Error properties: diagnostic-info=org.apache.hive.service.cli.HiveSQLException: Error running query: [NO_SUCH_CATALOG_EXCEPTION] org.apache.spark.sql.catalyst.analysis.NoSuchCatalogException: [NO_SUCH_CATALOG_EXCEPTION] Catalog 'default' was not found. Please verify the catalog name and then retry the query or command again. SQLSTATE: 42704
+	at org.apache.spark.sql.hive.thriftserver.HiveThriftServerErrors$.runningQueryError(HiveThriftServerErrors.scala:57)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.$anonfun$execute$1(SparkExecuteStatementOperation.scala:1426)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at com.databricks.unity.UCSEphemeralState$Handle.runWith(UCSEphemeralState.scala:51)
+	at com.databricks.unity.HandleImpl.runWith(UCSHandle.scala:138)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.execute(SparkExecuteStatementOperation.scala:1109)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.org$apache$spark$sql$hive$thriftserver$SparkExecuteStatementOperation$$executeHoldingScopeLease(SparkExecuteStatementOperation.scala:1089)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.$anonfun$run$7(SparkExecuteStatementOperation.scala:756)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at org.apache.spark.sql.execution.SQLExecution$.withRootExecution(SQLExecution.scala:2280)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.$anonfun$run$6(SparkExecuteStatementOperation.scala:756)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at org.apache.spark.sql.execution.SQLExecution$.withPreExecutionPhaseWatch(SQLExecution.scala:2179)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.$anonfun$run$3(SparkExecuteStatementOperation.scala:755)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at com.databricks.spark.util.DatabricksTracingHelper.$anonfun$withSpan$3(DatabricksSparkTracingHelper.scala:288)
+	at com.databricks.tracing.OtelTracing$.$anonfun$withSyncTracing$1(OtelTracing.scala:432)
+	at com.databricks.logging.AttributionContext$.withValue(AttributionContext.scala:352)
+	at com.databricks.tracing.OtelTracing$.withSyncTracing(OtelTracing.scala:431)
+	at com.databricks.spark.util.DatabricksTracingHelper.withSpan(DatabricksSparkTracingHelper.scala:288)
+	at com.databricks.spark.util.DBRTracing$.withSpan(DBRTracing.scala:87)
+	at org.apache.spark.sql.hive.thriftserver.ThriftLocalProperties.$anonfun$withLocalProperties$19(ThriftLocalProperties.scala:256)
+	at com.databricks.logging.AttributionContextTracing.$anonfun$withAttributionContext$1(AttributionContextTracing.scala:146)
+	at com.databricks.logging.AttributionContext$.withValue(AttributionContext.scala:352)
+	at com.databricks.logging.AttributionContextTracing.withAttributionContext(AttributionContextTracing.scala:144)
+	at com.databricks.logging.AttributionContextTracing.withAttributionContext$(AttributionContextTracing.scala:141)
+	at com.databricks.spark.util.PublicDBLogging.withAttributionContext(DatabricksSparkUsageLogger.scala:35)
+	at com.databricks.logging.AttributionContextTracing.withAttributionTags(AttributionContextTracing.scala:201)
+	at com.databricks.logging.AttributionContextTracing.withAttributionTags$(AttributionContextTracing.scala:182)
+	at com.databricks.spark.util.PublicDBLogging.withAttributionTags(DatabricksSparkUsageLogger.scala:35)
+	at com.databricks.spark.util.PublicDBLogging.withAttributionTags0(DatabricksSparkUsageLogger.scala:129)
+	at com.databricks.spark.util.DatabricksSparkUsageLogger.withAttributionTags(DatabricksSparkUsageLogger.scala:347)
+	at com.databricks.spark.util.UsageLogging.$anonfun$withAttributionTags$1(UsageLogger.scala:668)
+	at com.databricks.spark.util.UsageLogging$.withAttributionTags(UsageLogger.scala:780)
+	at com.databricks.spark.util.UsageLogging$.withAttributionTags(UsageLogger.scala:789)
+	at com.databricks.spark.util.UsageLogging.withAttributionTags(UsageLogger.scala:668)
+	at com.databricks.spark.util.UsageLogging.withAttributionTags$(UsageLogger.scala:666)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.withAttributionTags(SparkExecuteStatementOperation.scala:85)
+	at org.apache.spark.sql.hive.thriftserver.ThriftLocalProperties.$anonfun$withLocalProperties$16(ThriftLocalProperties.scala:255)
+	at com.databricks.spark.util.IdentityClaim$.withClaim(IdentityClaim.scala:48)
+	at org.apache.spark.sql.hive.thriftserver.ThriftLocalProperties.withLocalProperties(ThriftLocalProperties.scala:250)
+	at org.apache.spark.sql.hive.thriftserver.ThriftLocalProperties.withLocalProperties$(ThriftLocalProperties.scala:90)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.withLocalProperties(SparkExecuteStatementOperation.scala:85)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.$anonfun$run$2(SparkExecuteStatementOperation.scala:731)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at com.databricks.logging.AttributionContext$.withValue(AttributionContext.scala:352)
+	at com.databricks.spark.util.DatabricksTracingHelper.withOtelSpanLifecycle(DatabricksSparkTracingHelper.scala:137)
+	at com.databricks.spark.util.DatabricksTracingHelper.withSpanFromParent(DatabricksSparkTracingHelper.scala:191)
+	at com.databricks.spark.util.DBRTracing$.withSpanFromParent(DBRTracing.scala:68)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.run(SparkExecuteStatementOperation.scala:731)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.run(SparkExecuteStatementOperation.scala:713)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:439)
+	at org.apache.hadoop.security.authentication.util.SubjectUtil.doAs(SubjectUtil.java:328)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1958)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2.run(SparkExecuteStatementOperation.scala:773)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.spark.sql.catalyst.analysis.NoSuchCatalogException: [NO_SUCH_CATALOG_EXCEPTION] Catalog 'default' was not found. Please verify the catalog name and then retry the query or command again. SQLSTATE: 42704
+	at com.databricks.sql.managedcatalog.client.ManagedCatalogClientImpl.$anonfun$listSchemasProto$1(ManagedCatalogClientImpl.scala:1439)
+	at com.databricks.sql.managedcatalog.client.ManagedCatalogClientImpl.$anonfun$recordAndWrapExceptionBase$2(ManagedCatalogClientImpl.scala:8917)
+	at com.databricks.spark.util.FrameProfiler$.record(FrameProfiler.scala:115)
+	at com.databricks.sql.managedcatalog.client.ManagedCatalogClientImpl.$anonfun$recordAndWrapExceptionBase$1(ManagedCatalogClientImpl.scala:8916)
+	at com.databricks.sql.managedcatalog.client.ErrorDetailsHandlerImpl.wrapServiceException(ErrorDetailsHandler.scala:96)
+	at com.databricks.sql.managedcatalog.client.ErrorDetailsHandlerImpl.wrapServiceException$(ErrorDetailsHandler.scala:88)
+	at com.databricks.managedcatalog.ManagedCatalogClientImpl.wrapServiceException(ManagedCatalogClientImpl.scala:44)
+	at com.databricks.sql.managedcatalog.client.ManagedCatalogClientImpl.recordAndWrapExceptionBase(ManagedCatalogClientImpl.scala:8895)
+	at com.databricks.sql.managedcatalog.client.ManagedCatalogClientImpl.recordAndWrapExceptionWithoutPerApiMetric(ManagedCatalogClientImpl.scala:8824)
+	at com.databricks.sql.managedcatalog.client.ManagedCatalogClientImpl.listSchemasProto(ManagedCatalogClientImpl.scala:1406)
+	at com.databricks.sql.managedcatalog.client.ManagedCatalogClientImpl.listSchemas(ManagedCatalogClientImpl.scala:1388)
+	at com.databricks.sql.managedcatalog.ManagedCatalogCommon.listSchemasInternal(ManagedCatalogCommon.scala:1192)
+	at com.databricks.sql.managedcatalog.ManagedCatalogCommon.listSchemas(ManagedCatalogCommon.scala:1179)
+	at com.databricks.sql.managedcatalog.ProfiledManagedCatalog.$anonfun$listSchemas$1(ProfiledManagedCatalog.scala:262)
+	at org.apache.spark.sql.catalyst.MetricKeyUtils$.measure(MetricKey.scala:3187)
+	at com.databricks.sql.managedcatalog.ProfiledManagedCatalog.$anonfun$profile$1(ProfiledManagedCatalog.scala:80)
+	at com.databricks.spark.util.FrameProfiler$.record(FrameProfiler.scala:115)
+	at com.databricks.sql.managedcatalog.ProfiledManagedCatalog.profile(ProfiledManagedCatalog.scala:79)
+	at com.databricks.sql.managedcatalog.ProfiledManagedCatalog.listSchemas(ProfiledManagedCatalog.scala:262)
+	at com.databricks.sql.managedcatalog.ManagedCatalogSessionCatalog.listDatabasesWithCatalog(ManagedCatalogSessionCatalog.scala:1895)
+	at com.databricks.sql.managedcatalog.UnityCatalogV2Proxy.listNamespaces(UnityCatalogV2Proxy.scala:205)
+	at org.apache.spark.sql.execution.command.ShowNamespacesCommand.run(ShowNamespacesCommand.scala:56)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.$anonfun$sideEffectResult$2(commands.scala:103)
+	at org.apache.spark.sql.execution.SparkPlan.runCommandInAetherOrSpark(SparkPlan.scala:231)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.$anonfun$sideEffectResult$1(commands.scala:103)
+	at com.databricks.spark.util.FrameProfiler$.record(FrameProfiler.scala:115)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:100)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:99)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:113)
+	at org.apache.spark.sql.execution.QueryExecution$.$anonfun$runCommand$10(QueryExecution.scala:2965)
+	at com.databricks.util.LexicalThreadLocal$Handle.runWith(LexicalThreadLocal.scala:63)
+	at org.apache.spark.sql.execution.QueryExecution$.$anonfun$runCommand$9(QueryExecution.scala:2955)
+	at com.databricks.util.LexicalThreadLocal$Handle.runWith(LexicalThreadLocal.scala:63)
+	at org.apache.spark.sql.execution.QueryExecution$.executeWithCaches$1(QueryExecution.scala:2955)
+	at org.apache.spark.sql.execution.QueryExecution$.$anonfun$runCommand$8(QueryExecution.scala:2961)
+	at org.apache.spark.sql.catalyst.QueryPlanningTracker$.withTracker(QueryPlanningTracker.scala:306)
+	at org.apache.spark.sql.execution.QueryExecution$.$anonfun$runCommand$7(QueryExecution.scala:2948)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId0$29(SQLExecution.scala:1567)
+	at com.databricks.sql.util.MemoryTrackerHelper.withMemoryTracking(MemoryTrackerHelper.scala:111)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId0$26(SQLExecution.scala:1483)
+	at com.databricks.unity.UCSManager$.withTemporaryScope(UCSManager.scala:168)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId0$25(SQLExecution.scala:1371)
+	at org.apache.spark.sql.execution.SQLExecution$.withSessionTagsApplied(SQLExecution.scala:2354)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId0$24(SQLExecution.scala:1360)
+	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:97)
+	at org.apache.spark.sql.artifact.ArtifactManager.$anonfun$withResources$1(ArtifactManager.scala:142)
+	at org.apache.spark.sql.artifact.ArtifactManager.withClassLoaderIfNeeded(ArtifactManager.scala:136)
+	at org.apache.spark.sql.artifact.ArtifactManager.withResources(ArtifactManager.scala:141)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId0$23(SQLExecution.scala:1360)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:2389)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId0$3(SQLExecution.scala:1359)
+	at org.apache.spark.sql.execution.SQLExecution$.withEventV2ActionScope(SQLExecution.scala:1051)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId0$1(SQLExecution.scala:1100)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:881)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId0(SQLExecution.scala:1088)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:2307)
+	at org.apache.spark.sql.execution.QueryExecution$.$anonfun$runCommand$6(QueryExecution.scala:2948)
+	at org.apache.spark.sql.execution.QueryExecution$.withInternalError(QueryExecution.scala:2806)
+	at org.apache.spark.sql.execution.QueryExecution$.$anonfun$runCommand$5(QueryExecution.scala:2944)
+	at org.apache.spark.sql.execution.QueryExecution.withMVTagsIfNecessary(QueryExecution.scala:1258)
+	at org.apache.spark.sql.execution.QueryExecution$.$anonfun$runCommand$4(QueryExecution.scala:2936)
+	at scala.Option.map(Option.scala:242)
+	at org.apache.spark.sql.execution.QueryExecution$.executeWithMVTags$1(QueryExecution.scala:2936)
+	at org.apache.spark.sql.execution.QueryExecution$.runCommand(QueryExecution.scala:2942)
+	at org.apache.spark.sql.execution.QueryExecution.org$apache$spark$sql$execution$QueryExecution$$eagerlyExecute$1(QueryExecution.scala:1302)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$$nestedInanonfun$eagerlyExecuteCommands$1$1.applyOrElse(QueryExecution.scala:1319)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$$nestedInanonfun$eagerlyExecuteCommands$1$1.applyOrElse(QueryExecution.scala:1311)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruningCore$1(TreeNode.scala:704)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:142)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruningCore(TreeNode.scala:704)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:687)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:49)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:368)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:364)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:49)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:49)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:651)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$eagerlyExecuteCommands$1(QueryExecution.scala:1311)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.allowInvokingTransformsInAnalyzer(AnalysisHelper.scala:441)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:1311)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$lazyCommandExecuted$1(QueryExecution.scala:1212)
+	at scala.util.Try$.apply(Try.scala:217)
+	at org.apache.spark.util.Utils$.doTryWithCallerStacktrace(Utils.scala:1798)
+	at org.apache.spark.util.Utils$.getTryWithCallerStacktrace(Utils.scala:1848)
+	at org.apache.spark.util.LazyTry.get(LazyTry.scala:78)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$commandExecuted$1(QueryExecution.scala:1218)
+	at org.apache.spark.sql.execution.QueryExecution.withAbortTransactionOnFailure(QueryExecution.scala:2304)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:1218)
+	at org.apache.spark.sql.classic.Dataset.<init>(Dataset.scala:413)
+	at org.apache.spark.sql.classic.Dataset.<init>(Dataset.scala:393)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.$anonfun$getOrCreateDF$1(SparkExecuteStatementOperation.scala:883)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.withSuspendedQueryHangingDetection(SparkExecuteStatementOperation.scala:243)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.getOrCreateDF(SparkExecuteStatementOperation.scala:881)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.analyzeQuery(SparkExecuteStatementOperation.scala:912)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.$anonfun$execute$8(SparkExecuteStatementOperation.scala:1185)
+	at org.apache.spark.util.Utils$.timeTakenMs(Utils.scala:599)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.$anonfun$execute$1(SparkExecuteStatementOperation.scala:1185)
+	... 59 more
+, operation-id=01f1da03-6c21-1686-add0-2f698aade952
+[0m17:59:26.751547 [debug] [ThreadPool]: Databricks adapter: Exception while trying to execute query
+macro list_schemas
+: Database Error
+  [NO_SUCH_CATALOG_EXCEPTION] Catalog 'default' was not found. Please verify the catalog name and then retry the query or command again. SQLSTATE: 42704
+[0m17:59:26.752304 [debug] [ThreadPool]: On list_default: Close
+[0m17:59:26.752792 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f1da03-6bb0-1327-84bf-da4093610562) - Closing
+[0m17:59:26.969167 [info ] [MainThread]: 
+[0m17:59:26.970291 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 3.50 seconds (3.50s).
+[0m17:59:26.971202 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Database Error
+  Database Error
+    [NO_SUCH_CATALOG_EXCEPTION] Catalog 'default' was not found. Please verify the catalog name and then retry the query or command again. SQLSTATE: 42704
+[0m17:59:26.972249 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 5.8052673, "process_in_blocks": "0", "process_kernel_time": 0.37473, "process_mem_max_rss": "275038208", "process_out_blocks": "0", "process_user_time": 2.481228}
+[0m17:59:26.973629 [debug] [MainThread]: Command `dbt run` failed at 17:59:26.973473 after 5.81 seconds
+[0m17:59:26.974263 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1093725d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1131b9430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112fd1ac0>]}
+[0m17:59:26.974845 [debug] [MainThread]: Flushing usage events
+[0m17:59:27.522415 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:05:02.229403 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1097dcfe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a5f6f30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a5f6b70>]}
+
+
+============================== 18:05:02.232197 | 34388d88-b495-49ed-84b3-26ad46b2b2eb ==============================
+[0m18:05:02.232197 [info ] [MainThread]: Running with dbt=1.12.6
+[0m18:05:02.232483 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'use_colors': 'True', 'profiles_dir': '/Users/javierladino/.dbt', 'fail_fast': 'False', 'log_path': '/Users/javierladino/Documents/Estudio/data_engineer/dbt/dbt_pipeline/dbt_pipeline/logs', 'hints_enabled': 'True', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'write_json': 'True', 'warn_error': 'None', 'static_parser': 'True', 'version_check': 'True', 'target_path': 'None', 'indirect_selection': 'eager', 'log_format': 'default', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run', 'empty': 'False', 'maximum_seed_size_mib': '1', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'debug': 'False', 'quiet': 'False', 'cache_selected_only': 'False', 'partial_parse': 'True'}
+[0m18:05:02.743504 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m18:05:02.743756 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m18:05:02.743893 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m18:05:03.439335 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '34388d88-b495-49ed-84b3-26ad46b2b2eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107bc1190>]}
+[0m18:05:03.513575 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '34388d88-b495-49ed-84b3-26ad46b2b2eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d941700>]}
+[0m18:05:03.514066 [info ] [MainThread]: Registered adapter: databricks=1.13.0
+[0m18:05:03.621452 [debug] [MainThread]: checksum: 205618094adeef314bf9310d5c6f07b83649174a97246d3878885001afd639a2, vars: {}, profile: dbt_pipeline, target: dev, version: 1.12.6
+[0m18:05:03.670363 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m18:05:03.670627 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '34388d88-b495-49ed-84b3-26ad46b2b2eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112e8ac90>]}
+[0m18:05:04.497602 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '34388d88-b495-49ed-84b3-26ad46b2b2eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1133094f0>]}
+[0m18:05:04.542971 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/javierladino/Documents/Estudio/data_engineer/dbt/dbt_pipeline/dbt_pipeline/target/manifest.json
+[0m18:05:04.544600 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/javierladino/Documents/Estudio/data_engineer/dbt/dbt_pipeline/dbt_pipeline/target/semantic_manifest.json
+[0m18:05:04.557015 [debug] [MainThread]: Wrote artifact OsiDocument to /Users/javierladino/Documents/Estudio/data_engineer/dbt/dbt_pipeline/dbt_pipeline/target/osi_document.json
+[0m18:05:04.563331 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '34388d88-b495-49ed-84b3-26ad46b2b2eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x115a32900>]}
+[0m18:05:04.563539 [info ] [MainThread]: Found 2 models, 4 data tests, 782 macros
+[0m18:05:04.563698 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '34388d88-b495-49ed-84b3-26ad46b2b2eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113309fa0>]}
+[0m18:05:04.564562 [info ] [MainThread]: 
+[0m18:05:04.564724 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m18:05:04.564843 [info ] [MainThread]: 
+[0m18:05:04.565117 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m18:05:04.565246 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m18:05:04.568146 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_workspace) - Creating connection
+[0m18:05:04.568306 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace'
+[0m18:05:04.573855 [debug] [ThreadPool]: Using databricks connection "list_workspace"
+[0m18:05:04.574042 [debug] [ThreadPool]: On list_workspace: /* {"app": "dbt", "dbt_version": "1.12.6", "dbt_databricks_version": "1.13.0", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_pipeline", "target_name": "dev", "invocation_id": "34388d88-b495-49ed-84b3-26ad46b2b2eb", "connection_name": "list_workspace"} */
+
+    
+
+  SHOW SCHEMAS IN `workspace`
+
+
+  
+[0m18:05:04.574174 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:05:06.924968 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f1da04-36fb-1f8a-8c12-b56eac27d105) - Created
+[0m18:05:07.526846 [debug] [ThreadPool]: SQL status: OK in 2.950 seconds
+[0m18:05:07.558700 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f1da04-36fb-1f8a-8c12-b56eac27d105, command-id=01f1da04-3772-13b0-9333-6f411cbe867c) - Closing
+[0m18:05:07.559148 [debug] [ThreadPool]: On list_workspace: Close
+[0m18:05:07.559364 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f1da04-36fb-1f8a-8c12-b56eac27d105) - Closing
+[0m18:05:07.768609 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_workspace_default) - Creating connection
+[0m18:05:07.769424 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace_default'
+[0m18:05:07.776499 [debug] [ThreadPool]: Using databricks connection "list_workspace_default"
+[0m18:05:07.777064 [debug] [ThreadPool]: On list_workspace_default: /* {"app": "dbt", "dbt_version": "1.12.6", "dbt_databricks_version": "1.13.0", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_pipeline", "target_name": "dev", "invocation_id": "34388d88-b495-49ed-84b3-26ad46b2b2eb", "connection_name": "list_workspace_default"} */
+
+    
+SELECT
+  table_name,
+  if(table_type IN ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE', 'EXTERNAL_SHALLOW_CLONE'), 'table', lower(table_type)) AS table_type,
+  lower(data_source_format) AS file_format,
+  table_owner,
+  if(
+    table_type IN (
+      'EXTERNAL',
+      'MANAGED',
+      'MANAGED_SHALLOW_CLONE',
+      'EXTERNAL_SHALLOW_CLONE'
+    ),
+    lower(table_type),
+    NULL
+  ) AS databricks_table_type
+FROM `system`.`information_schema`.`tables`
+WHERE table_catalog = 'workspace'
+  AND table_schema = 'default'
+
+  
+[0m18:05:07.777467 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:05:08.532328 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f1da04-3847-1fb5-901a-c2dc43132152) - Created
+[0m18:05:10.256625 [debug] [ThreadPool]: SQL status: OK in 2.480 seconds
+[0m18:05:10.263028 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f1da04-3847-1fb5-901a-c2dc43132152, command-id=01f1da04-3866-18d3-8061-f4782492ab67) - Closing
+[0m18:05:10.264259 [debug] [ThreadPool]: On list_workspace_default: Close
+[0m18:05:10.264624 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f1da04-3847-1fb5-901a-c2dc43132152) - Closing
+[0m18:05:10.471681 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '34388d88-b495-49ed-84b3-26ad46b2b2eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107afa660>]}
+[0m18:05:10.476290 [debug] [Thread-3 (]: Began running node model.dbt_pipeline.my_first_dbt_model
+[0m18:05:10.476951 [info ] [Thread-3 (]: 1 of 2 START sql table model default.my_first_dbt_model ........................ [RUN]
+[0m18:05:10.477622 [debug] [Thread-3 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.dbt_pipeline.my_first_dbt_model) - Creating connection
+[0m18:05:10.477972 [debug] [Thread-3 (]: Acquiring new databricks connection 'model.dbt_pipeline.my_first_dbt_model'
+[0m18:05:10.478301 [debug] [Thread-3 (]: Began compiling node model.dbt_pipeline.my_first_dbt_model
+[0m18:05:10.487632 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_pipeline.my_first_dbt_model"
+[0m18:05:10.489070 [debug] [Thread-3 (]: Began executing node model.dbt_pipeline.my_first_dbt_model
+[0m18:05:10.507881 [debug] [Thread-3 (]: MATERIALIZING TABLE
+[0m18:05:10.532193 [debug] [Thread-3 (]: Using databricks connection "model.dbt_pipeline.my_first_dbt_model"
+[0m18:05:10.533014 [debug] [Thread-3 (]: On model.dbt_pipeline.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.6", "dbt_databricks_version": "1.13.0", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_pipeline", "target_name": "dev", "invocation_id": "34388d88-b495-49ed-84b3-26ad46b2b2eb", "node_id": "model.dbt_pipeline.my_first_dbt_model"} */
+SELECT
+    table_catalog,
+    table_schema,
+    table_name,
+    filter_name,
+    target_columns
+  FROM `workspace`.`information_schema`.`row_filters`
+  WHERE table_catalog = 'workspace'
+    AND table_schema = 'default'
+    AND table_name = 'my_first_dbt_model'
+[0m18:05:10.533679 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m18:05:11.110566 [debug] [Thread-3 (]: Databricks adapter: Connection(session-id=01f1da04-39d4-1e95-b5d0-468a13a0e4eb) - Created
+[0m18:05:12.128934 [debug] [Thread-3 (]: SQL status: OK in 1.600 seconds
+[0m18:05:12.131774 [debug] [Thread-3 (]: Databricks adapter: Cursor(session-id=01f1da04-39d4-1e95-b5d0-468a13a0e4eb, command-id=01f1da04-39f1-1257-a05c-02eb021ab1ce) - Closing
+[0m18:05:12.148075 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_pipeline.my_first_dbt_model"
+[0m18:05:12.149013 [debug] [Thread-3 (]: Using databricks connection "model.dbt_pipeline.my_first_dbt_model"
+[0m18:05:12.149301 [debug] [Thread-3 (]: On model.dbt_pipeline.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.6", "dbt_databricks_version": "1.13.0", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_pipeline", "target_name": "dev", "invocation_id": "34388d88-b495-49ed-84b3-26ad46b2b2eb", "node_id": "model.dbt_pipeline.my_first_dbt_model"} */
+
+  
+    
+        create or replace table `workspace`.`default`.`my_first_dbt_model`
+      
+      
+    using delta
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      as
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  
+[0m18:05:22.252344 [debug] [Thread-3 (]: SQL status: OK in 10.100 seconds
+[0m18:05:22.253928 [debug] [Thread-3 (]: Databricks adapter: Cursor(session-id=01f1da04-39d4-1e95-b5d0-468a13a0e4eb, command-id=01f1da04-3a90-15f2-90a1-65ff550f1433) - Closing
+[0m18:05:22.517097 [debug] [Thread-3 (]: Applying tags to relation None
+[0m18:05:22.536305 [debug] [Thread-3 (]: On model.dbt_pipeline.my_first_dbt_model: Close
+[0m18:05:22.536667 [debug] [Thread-3 (]: Databricks adapter: Connection(session-id=01f1da04-39d4-1e95-b5d0-468a13a0e4eb) - Closing
+[0m18:05:22.776542 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '34388d88-b495-49ed-84b3-26ad46b2b2eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1125a30e0>]}
+[0m18:05:22.778115 [info ] [Thread-3 (]: 1 of 2 OK created sql table model default.my_first_dbt_model ................... [[32mOK[0m in 12.29s]
+[0m18:05:22.779085 [debug] [Thread-3 (]: Finished running node model.dbt_pipeline.my_first_dbt_model
+[0m18:05:22.780287 [debug] [Thread-5 (]: Began running node model.dbt_pipeline.my_second_dbt_model
+[0m18:05:22.780906 [info ] [Thread-5 (]: 2 of 2 START sql view model default.my_second_dbt_model ........................ [RUN]
+[0m18:05:22.781687 [debug] [Thread-5 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.dbt_pipeline.my_second_dbt_model) - Creating connection
+[0m18:05:22.782081 [debug] [Thread-5 (]: Acquiring new databricks connection 'model.dbt_pipeline.my_second_dbt_model'
+[0m18:05:22.782447 [debug] [Thread-5 (]: Began compiling node model.dbt_pipeline.my_second_dbt_model
+[0m18:05:22.785091 [debug] [Thread-5 (]: Writing injected SQL for node "model.dbt_pipeline.my_second_dbt_model"
+[0m18:05:22.786457 [debug] [Thread-5 (]: Began executing node model.dbt_pipeline.my_second_dbt_model
+[0m18:05:22.795614 [debug] [Thread-5 (]: MATERIALIZING VIEW
+[0m18:05:22.811459 [debug] [Thread-5 (]: Creating view `workspace`.`default`.`my_second_dbt_model`
+[0m18:05:22.812368 [debug] [Thread-5 (]: Writing runtime sql for node "model.dbt_pipeline.my_second_dbt_model"
+[0m18:05:22.812994 [debug] [Thread-5 (]: Using databricks connection "model.dbt_pipeline.my_second_dbt_model"
+[0m18:05:22.813248 [debug] [Thread-5 (]: On model.dbt_pipeline.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.6", "dbt_databricks_version": "1.13.0", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_pipeline", "target_name": "dev", "invocation_id": "34388d88-b495-49ed-84b3-26ad46b2b2eb", "node_id": "model.dbt_pipeline.my_second_dbt_model"} */
+
+  
+  
+  create or replace view `workspace`.`default`.`my_second_dbt_model`
+  
+  
+  as (
+    -- Use the `ref` function to select from other models
+
+select *
+from `workspace`.`default`.`my_first_dbt_model`
+where id = 1
+  )
+
+[0m18:05:22.813477 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m18:05:23.519812 [debug] [Thread-5 (]: Databricks adapter: Connection(session-id=01f1da04-4133-15d9-880f-0bde92a4d2bf) - Created
+[0m18:05:24.372640 [debug] [Thread-5 (]: SQL status: OK in 1.560 seconds
+[0m18:05:24.374935 [debug] [Thread-5 (]: Databricks adapter: Cursor(session-id=01f1da04-4133-15d9-880f-0bde92a4d2bf, command-id=01f1da04-4154-1469-a6df-2d1ee5907acc) - Closing
+[0m18:05:24.378213 [debug] [Thread-5 (]: Applying tags to relation None
+[0m18:05:24.382019 [debug] [Thread-5 (]: On model.dbt_pipeline.my_second_dbt_model: Close
+[0m18:05:24.382355 [debug] [Thread-5 (]: Databricks adapter: Connection(session-id=01f1da04-4133-15d9-880f-0bde92a4d2bf) - Closing
+[0m18:05:24.600041 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '34388d88-b495-49ed-84b3-26ad46b2b2eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x115a90e30>]}
+[0m18:05:24.601723 [info ] [Thread-5 (]: 2 of 2 OK created sql view model default.my_second_dbt_model ................... [[32mOK[0m in 1.82s]
+[0m18:05:24.602733 [debug] [Thread-5 (]: Finished running node model.dbt_pipeline.my_second_dbt_model
+[0m18:05:24.604830 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m18:05:24.605337 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m18:05:24.605995 [info ] [MainThread]: 
+[0m18:05:24.606421 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 20.04 seconds (20.04s).
+[0m18:05:24.607409 [debug] [MainThread]: Command end result
+[0m18:05:24.656438 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/javierladino/Documents/Estudio/data_engineer/dbt/dbt_pipeline/dbt_pipeline/target/manifest.json
+[0m18:05:24.658373 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/javierladino/Documents/Estudio/data_engineer/dbt/dbt_pipeline/dbt_pipeline/target/semantic_manifest.json
+[0m18:05:24.659679 [debug] [MainThread]: Wrote artifact OsiDocument to /Users/javierladino/Documents/Estudio/data_engineer/dbt/dbt_pipeline/dbt_pipeline/target/osi_document.json
+[0m18:05:24.663465 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/javierladino/Documents/Estudio/data_engineer/dbt/dbt_pipeline/dbt_pipeline/target/run_results.json
+[0m18:05:24.663650 [info ] [MainThread]: 
+[0m18:05:24.663863 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:05:24.664011 [info ] [MainThread]: 
+[0m18:05:24.664177 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=2
+[0m18:05:24.664495 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 22.483145, "process_in_blocks": "0", "process_kernel_time": 0.445593, "process_mem_max_rss": "274808832", "process_out_blocks": "0", "process_user_time": 2.928894}
+[0m18:05:24.664820 [debug] [MainThread]: Command `dbt run` succeeded at 18:05:24.664776 after 22.48 seconds
+[0m18:05:24.665014 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a50d8e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a5f6de0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a5f6db0>]}
+[0m18:05:24.665187 [debug] [MainThread]: Flushing usage events
+[0m18:05:25.321647 [debug] [MainThread]: An error was encountered while trying to flush usage events
